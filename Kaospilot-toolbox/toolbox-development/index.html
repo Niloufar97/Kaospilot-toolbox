@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- Resource style -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Kaospilot</title>
+</head>
+<body>
+<div class="popup">
+    <div class="popup-wrapper">
+        <button class="popup-close-btn">&#10006;</button>
+        <div class="popup-header">
+            <h1 class="popup-header-title"></h1>
+            <div class="popup-header-info">
+
+                <div class="header-info-details">
+                    <p class="header-info-title">Level</p>
+                    <div class="header-info-item">
+                        <i class="header-info-item-icon"></i>
+                        <span class="header-info-item-title info-item-title__difficulty"></span>
+                    </div>
+                </div>
+
+                <div class="header-info-details">
+                    <p class="header-info-title">Participants</p>
+                    <div class="header-info-item">
+                        <i class="header-info-item-icon"></i>
+                        <span class="header-info-item-title info-item-title__participants"></span>
+                    </div>
+                </div>
+
+                <div class="header-info-details">
+                    <p class="header-info-title">Duration</p>
+                    <div class="header-info-item">
+                        <i class="header-info-item-icon"></i>
+                        <span class="header-info-item-title info-item-title__duration"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup-main">
+            <div class="popup-main-wrapper">
+                <div class="popup-main-intro">
+                    <p class="main-paragraph main-paragraph-pitch"></p>
+                </div>
+                <img class="popup-main-image" src="#" alt="workshope image">
+                <p class="main-paragraph main-paragraph-description"></p>
+                <hr>
+                <div id="main-steps-container"></div>
+                <hr class="main-hr">
+                <h3 class="main-h3">Materials</h3>
+                <p class="main-paragraph main-paragraph-materials"></p>
+                <hr>
+                <h3 class="main-h3">Source</h3>
+                <p class="main-paragraph main-paragraph-source"></p>
+                <div id="steps">
+                </div>
+
+                <button class="popup-print-btn btn">Print</button>
+
+
+            </div>
+        </div>
+
+    </div>
+</div><!-- popup -->
+<header class="header">
+    <div class="header-wrapper">
+        <div class="header-logo">
+            <img src="img/img-header/logo.svg" alt="Kaospilot Logo">
+        </div>
+        <div class="header-description">
+            <p>Toolbox For Workshops By Kaospilot</p>
+        </div>
+        <div class="header-search-and-social">
+            <div class="header-search-container">
+                <input type="search" class="search-input" placeholder="Search...">
+                <span class="search-icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+            </div>
+            <div class="social-row">
+                <a href="https://www.facebook.com/Kaospilots/" target="_blank" class="social-media"><i
+                        class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kaospilot_denmark/" target="_blank" class="social-media"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/kaospilot/" class="social-media"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="popular-tolls">
+    <h2 class="popular-tolls-h2">Popular tools</h2>
+    <div id="swiper-container" class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper"></div>
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Navigation buttons -->
+    <div id="js-prev" class="swiper-button-prev"></div>
+    <div id="js-next" class="swiper-button-next"></div>
+</section>
+<main class="main">
+    <div class="tab-filter-wrapper">
+        <div class="tab-filter">
+            <ul class="filters">
+                <li class="placeholder">
+                    <a data-type="all" href="#0">All</a> <!-- selected option on mobile -->
+                </li>
+                <li class="filter_item"><a class="selected" href="#0" data-type="all">All</a></li>
+                <li class="filter_item" data-filter="sortAlf"><a href="#0" data-type="sortAlf">A-Z</a></li>
+                <li class="filter_item" data-filter="sortAlfReverse"><a href="#0" data-type="sortAlfReverse">Z-A</a>
+                </li>
+            </ul> <!-- filters -->
+        </div> <!-- tab-filter -->
+    </div> <!-- tab-filter-wrapper -->
+
+    <section class="gallery"></section> <!-- gallery -->
+
+
+    <div class="filter">
+        <form class="filter-form">
+            <div class="filter-block">
+                <h4>Difficulty</h4>
+                <ul class="filter-content filters list">
+                    <li>
+                        <input class="filter_difficulty" data-filter="beginner" type="checkbox" id="checkboxBeginner">
+                        <label class="checkbox-label" for="checkboxBeginner">Beginner</label>
+                    </li>
+
+                    <li>
+                        <input class="filter_difficulty" data-filter="medium" type="checkbox" id="checkboxMedium">
+                        <label class="checkbox-label" for="checkboxMedium">Medium</label>
+                    </li>
+
+                    <li>
+                        <input class="filter_difficulty" data-filter="expert" type="checkbox" id="checkboxExpert">
+                        <label class="checkbox-label" for="checkboxExpert">Expert</label>
+                    </li>
+                </ul> <!-- filter-content -->
+            </div> <!-- filter-block -->
+
+            <div class="filter-block">
+                <h4>Category</h4>
+                <ul class="filter-content filters list">
+                    <li>
+                        <input class="filter_category" data-filter="energizer" type="checkbox" id="checkboxEnergizer">
+                        <label class="checkbox-label" for="checkboxEnergizer">Energizer</label>
+                    </li>
+                    <li>
+                        <input class="filter_category" data-filter="team" type="checkbox" id="checkboxTeam">
+                        <label class="checkbox-label" for="checkboxTeam">Team</label>
+                    </li>
+                    <li>
+                        <input class="filter_category" data-filter="innovation" type="checkbox" id="checkboxInnovation">
+                        <label class="checkbox-label" for="checkboxInnovation">Innovation</label>
+                    </li>
+                    <li>
+                        <input class="filter_category" data-filter="action" type="checkbox" id="checkboxAction">
+                        <label class="checkbox-label" for="checkboxAction">Action</label>
+                    </li>
+                </ul> <!-- filter-content -->
+            </div> <!-- filter-block -->
+
+            <div class="filter-block">
+                <h4>Number of participants</h4>
+                <div class="filter-content filters sliders">
+                    <div class="sliders-control">
+                        <input id="fromSlider" type="range" value="1" min="1" max="100"/>
+                        <input id="toSlider" type="range" value="100" min="1" max="100"/>
+                    </div>
+                    <div class="filter-control">
+                        <div class="filter-control-container">
+                            <div class="filter-control-container__participants">Min</div>
+                            <input class="filter-control-container__input" type="number" id="fromInput" value="1"
+                                   min="1" max="100"/>
+                        </div>
+                        <div class="filter-control-container">
+                            <div class="filter-control-container__participants">Max</div>
+                            <input class="filter-control-container__input" type="number" id="toInput" value="100" min="1"
+                                   max="100"/>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- filter-block -->
+
+            <div class="filter-block">
+                <h4>Duration</h4>
+                <div class="filter-content filters sliders">
+                    <div class="sliders-control">
+                        <input id="fromSliderTime" type="range" value="5" min="5" max="120"/>
+                        <input id="toSliderTime" type="range" value="120" min="5" max="120"/>
+                    </div>
+                    <div class="filter-control">
+                        <div class="filter-control-container">
+                            <div class="filter-control-container__time">Min</div>
+                            <input class="filter-control-container__input" type="number" id="fromInputTime" value="5"
+                                   min="5" max="120"/>
+                        </div>
+                        <div class="filter-control-container">
+                            <div class="filter-control-container__time">Max</div>
+                            <input class="filter-control-container__input" type="number" id="toInputTime" value="120"
+                                   min="5" max="120"/>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- filter-block -->
+
+        </form>
+
+        <a href="#0" class="close">Close</a>
+    </div> <!-- filter -->
+
+    <a href="#0" class="filter-trigger">Filters</a>
+</main>
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-wrapper">
+        <div class="footer-wrapper-section">
+            <h3 class="footer-title">GET INVOLVED</h3>
+            <p class="footer-paragraph-involved">Keep up-to-date with us and receive the latest and greatest blog posts, videos and much more.
+                See our <a href="https://www.kaospilot.dk/privacy-policy/">Privacy Policy
+                </a>  for any nitty-gritty information.</p>
+            <div class="social-row ffoter-social-row">
+                <a href="https://www.facebook.com/Kaospilots/" target="_blank" class="footer-social-media social-media"><i
+                        class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/kaospilot_denmark/" target="_blank" class="footer-social-media social-media"><i
+                        class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/school/kaospilot/" class="footer-social-media social-media"><i
+                        class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-wrapper-section">
+            <h3 class="footer-title">ABOUT</h3>
+            <ul class="footer-section-list">
+                <li><a href="https://www.kaospilot.dk/what-is-a-kaospilot/">What is a Kaospilot?</a></li>
+                <li><a href="https://www.kaospilot.dk/history/">Our History</a></li>
+                <li><a href="https://www.kaospilot.dk/blog/">Blog</a></li>
+                <li><a href="https://www.kaospilot.dk/terms-conditions/">Terms & Conditions</a></li>
+                <li><a href="https://www.kaospilot.dk/privacy-policy/">Privacy Policy</a></li>
+                <li><a href="https://www.kaospilot.dk/covid19-policy/">COVID Policy</a></li>
+            </ul>
+        </div>
+        <div class="footer-wrapper-section">
+            <h3 class="footer-title">CONTACT</h3>
+            <p><a href="https://www.kaospilot.dk/">KAOSPILOT</a></p>
+            <p>Filmbyen 11A, 2nd floor</p>
+            <p>8000 Aarhus C</p>
+            <p>Denmark</p>
+            <p>Tel.: +45 86 12 95 22</p>
+            <p>Email: <a href="mailto:kaos@kaospilot.dk">kaos@kaospilot.dk</a></p>
+            <p>CVR nr.: 26039940</p>
+        </div>
+    </div>
+</footer> <!-- footer end-->
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
